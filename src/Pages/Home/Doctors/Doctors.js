@@ -13,7 +13,7 @@ const Doctors = () => {
 
   return (
     <div>
-      <h2>Our Doctors: {doctors.length}</h2>
+      <h2>Available Doctors</h2>
       <Container>
         <Grid container spacing={2}>
           {doctors.map((doctor) => (

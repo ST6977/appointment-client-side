@@ -4,7 +4,7 @@ import { Button, Input, TextField } from "@mui/material";
 const AddDoctor = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  // const [hospital, setHospital] = useState("");
+  const [hospital, setHospital] = useState("");
   const [image, setImage] = useState(null);
   const [success, setSuccess] = useState(false);
 
@@ -16,7 +16,7 @@ const AddDoctor = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("email", email);
-    // formData.append("hospital", hospital);
+    formData.append("hospital", hospital);
     formData.append("image", image);
 
     fetch("http://localhost:5000/doctors", {
@@ -47,14 +47,14 @@ const AddDoctor = () => {
           variant="standard"
         />
 
-        {/* <br />
+        <br />
         <TextField
           sx={{ width: "50%" }}
           label="Hospital Name"
           required
           onChange={(e) => setHospital(e.target.value)}
           variant="standard"
-        /> */}
+        />
 
         <br />
         <TextField

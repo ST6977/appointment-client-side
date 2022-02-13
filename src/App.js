@@ -1,4 +1,5 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
 import Appointment from "./Pages/Appointment/Appointment/Appointment";
@@ -16,6 +17,7 @@ import ManageAppointments from "./Pages/Dashboard/manageAppointments/ManageAppoi
 import About from "./Pages/AboutUS/About";
 import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/contact/Contact";
+import Footer from "./Pages/Footer/Footer.js";
 
 function App() {
   return (
@@ -81,6 +83,7 @@ function App() {
             <Route path="/register" element={<Register />}></Route>
             <Route exact path="/" element={<Home />}></Route>
           </Routes>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
