@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Doctor = ({ doctor }) => {
   const { name, image, hospital } = doctor;
@@ -12,6 +13,15 @@ const Doctor = ({ doctor }) => {
       />
       <h3>{name}</h3>
       <p>{hospital}</p>
+      <Button variant="contained">
+        {" "}
+        <Link
+          style={{ color: "white", textDecoration: "none" }}
+          to="/appointment"
+        >
+          Appointment
+        </Link>
+      </Button>
     </Grid>
   );
 };
