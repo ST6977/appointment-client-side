@@ -16,7 +16,7 @@ const About = () => {
           />
 
           <p>
-            Schedule your Appointment, Classes, and Interviews with Picktime.
+            Schedule your Appointments, Classes, and Interviews with PickTime.
             Easily manage your Rooms and Equipment with a few clicks. With our
             Online Booking feature, clients can make bookings 24x7. All you have
             to do is signup, create your account
