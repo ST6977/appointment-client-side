@@ -3,7 +3,7 @@ import { Button, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Doctor = ({ doctor }) => {
-  const { name, image, hospital } = doctor;
+  const { name, image, hospital, degree, specialist } = doctor;
   return (
     <Grid item xs={12} sm={6} md={4}>
       <img
@@ -13,6 +13,8 @@ const Doctor = ({ doctor }) => {
       />
       <h3>{name}</h3>
       <p>{hospital}</p>
+      <p>{degree}</p>
+      <p>{specialist}</p>
       <Button variant="contained">
         {" "}
         <Link

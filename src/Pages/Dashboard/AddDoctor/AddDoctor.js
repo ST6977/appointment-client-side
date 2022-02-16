@@ -5,6 +5,8 @@ const AddDoctor = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [hospital, setHospital] = useState("");
+  const [degree, setDegree] = useState("");
+  const [specialist, setSpecialist] = useState("");
   const [image, setImage] = useState(null);
   const [success, setSuccess] = useState(false);
 
@@ -18,6 +20,8 @@ const AddDoctor = () => {
     formData.append("email", email);
     formData.append("hospital", hospital);
     formData.append("image", image);
+    formData.append("degree", degree);
+    formData.append("specialist", specialist);
 
     fetch("http://localhost:5000/doctors", {
       method: "POST",
@@ -28,6 +32,7 @@ const AddDoctor = () => {
         if (data.insertedId) {
           setSuccess("Doctor added successfully");
           console.log("doctor added successfully");
+          console.log(formData);
         }
       })
       .catch((error) => {
@@ -53,6 +58,25 @@ const AddDoctor = () => {
           label="Hospital Name"
           required
           onChange={(e) => setHospital(e.target.value)}
+          variant="standard"
+        />
+
+        <br />
+        <TextField
+          sx={{ width: "50%" }}
+          label="Degree Name"
+          required
+          onChange={(e) => setDegree(e.target.value)}
+          variant="standard"
+        />
+
+        <br />
+
+        <TextField
+          sx={{ width: "50%" }}
+          label="Specialist Name"
+          required
+          onChange={(e) => setSpecialist(e.target.value)}
           variant="standard"
         />
 
